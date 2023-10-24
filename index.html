@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Web Design</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inspiration&family=Poppins&display=swap');
+      
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+            font-family: 'Inspiration', cursive;
+            font-family: 'Poppins', sans-serif;
+        }
+        .webpage{
+            width: 100%;
+            height: 100vh;
+            background-image: url(pexels-max-rahubovskiy-6527069.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;            
+            overflow: hidden;
+        }
+        .navbar img{
+            width: 18%;
+            height: 18%;
+            background-image:none;
+            
+        }
+        .webpage .navbar ul li{
+            list-style-type: none;
+            position: relative;
+        }
+        .webpage .navbar ul li a{
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+            position: relative;
+        }
+        .webpage .navbar ul{
+            display:flex ;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            column-gap: 50px;
+        }
+        .navbar{
+            width: 100%;
+            height: 13%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            position: sticky;
+            top: 0%;
+            left: 0%;
+            background-color: transparent;
+        }
+        .content{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        .content h1{
+            font-size: 50px;
+        }
+        .content p{
+            font-weight: bolder;
+        }
+        /*navbar*/
+        .webpage .navbar ul li a::after{
+            content:'';
+            width:0%;
+            height: 11%;
+            background-color:white;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            transition: all 0.4s linear;
+        }
+        .webpage .navbar ul li a:hover::after{
+            width: 100%;
+
+        }
+        .content .btn button{
+            width: 200px;
+            height: 50px;
+            background-color: transparent;
+            font-weight: bold;
+            border: none;
+            border: 2px solid #ff4d6d;
+            border-radius: 50px;            
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .content .btn button span{
+            
+            width:0%;
+            height: 100%;
+            background-color: rgb(255, 223, 228);
+            position: absolute;
+            top: 0%;
+            bottom: 0%;
+            left: 0%;
+            border-radius: 50px;
+            z-index: -1;
+            transition: all 0.4s linear;
+        }
+        .content .btn button:hover span{
+            width: 100%;
+        }
+        .content .btn button:hover{
+            color: white;
+        }
+      </style>
+</head>
+<body>
+    
+    <!--home page-->
+    <section class="webpage">
+        <div class="navbar">
+            <div class="logo"><img src="./14095914_163-transformed.jpg" alt="home Designer"></div>
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">BEDROOM</a></li>
+            <li><a href="#">DINING</a></li>
+            <li><a href="#">KITCHEN</a></li>
+            <li><a href="#">BACKYARD</a></li>
+        </ul>
+
+        </div>
+
+        <div class="content">
+            <h1>DESIGN YOUR HOUSE</h1>
+            <p><span style="font-size: 50px; color: white;">"</span> Design is not just what it looks like & feels like. Design is how it works <span style="font-size: 50px; color: white;">"</span> -Steve Jobs</p>
+            <div class="btn">
+                <button type="submit" class="btn1"> <span></span> WATCH MORE</button>
+                <button type="submit" class="btn2"> <span></span> BOOK NOW</button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
